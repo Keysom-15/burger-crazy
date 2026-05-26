@@ -133,17 +133,39 @@
 <body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
 <!-- TopNavBar -->
 <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 bg-surface dark:bg-surface border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-<div class="font-headline-md text-headline-md font-black text-primary dark:text-primary italic uppercase tracking-tighter">Burger Crazy
-        </div>
+<a href="index.html" class="font-headline-md text-2xl md:text-headline-md font-black text-primary dark:text-primary italic uppercase tracking-tighter hover:text-secondary transition-colors">Burger Crazy
+        </a>
 <div class="hidden md:flex gap-md">
 <a class="font-headline-md text-headline-md font-bold text-primary underline decoration-4 underline-offset-8" href="#">Inicio</a>
 <a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Menu.html">Menú</a>
 <a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Contacto.html">Contacto</a>
 </div>
-<button onclick="window.location.href='Menu.html'" class="bg-primary-container text-on-primary-container px-md py-sm font-label-bold border-2 border-black brutal-shadow brutal-shadow-hover active:translate-y-1 transition-all uppercase">
-            ¡PIDE AHORA!
-        </button>
+<div class="flex items-center gap-sm">
+    <button onclick="window.location.href='Menu.html'" class="hidden sm:block bg-primary-container text-on-primary-container px-md py-sm font-label-bold border-2 border-black brutal-shadow brutal-shadow-hover active:translate-y-1 transition-all uppercase">
+        ¡PIDE AHORA!
+    </button>
+    <button onclick="toggleMobileMenu()" class="md:hidden material-symbols-outlined text-primary p-2 border-2 border-black brutal-shadow bg-surface-container-highest">
+        menu
+    </button>
+</div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[70] hidden md:hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="toggleMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-64 bg-surface border-l-4 border-black p-md flex flex-col brutal-shadow">
+        <div class="flex justify-between items-center mb-lg">
+            <span class="font-headline-md text-primary italic uppercase">Navegación</span>
+            <button onclick="toggleMobileMenu()" class="material-symbols-outlined text-primary">close</button>
+        </div>
+        <nav class="flex flex-col gap-md">
+            <a class="font-headline-md text-xl font-bold text-primary underline decoration-4 underline-offset-4" href="index.html">Inicio</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary transition-colors" href="Menu.html">Menú</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary transition-colors" href="Contacto.html">Contacto</a>
+        </nav>
+    </div>
+</div>
+
 <!-- Hero Section -->
 <section class="relative overflow-hidden bg-primary-container pt-xl pb-lg border-b-4 border-black">
 <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 32px 32px;"></div>
@@ -153,7 +175,7 @@
 <div class="inline-block bg-tertiary text-on-tertiary font-label-bold px-sm py-xs border-2 border-black brutal-shadow mb-md rotate-[-2deg]">
                     EL SABOR MÁS LOCO DE LA CIUDAD
                 </div>
-<h1 class="font-headline-xl text-headline-xl text-on-primary-container mb-md uppercase tracking-tighter">
+<h1 class="font-headline-xl text-4xl md:text-headline-xl text-on-primary-container mb-md uppercase tracking-tighter">
                     SIGUE CON HAMBRE <br> <span class="text-white crazy-text-outline italic">¡SIGUE LOCO!</span>
 </h1>
 <p class="font-body-lg text-body-lg mb-lg text-on-primary-container max-w-lg">
@@ -164,7 +186,7 @@
                         VER EL MENÚ
                     </button>
 <div class="flex flex-col justify-center">
-<span class="font-label-bold text-on-primary-container uppercase opacity-75">Domicilios directos:</span>
+<span class="font-label-bold text-on-primary-container uppercase opacity-75 text-xs md:text-sm">Domicilios directos:</span>
 <a class="font-headline-md text-headline-md text-white hover:text-tertiary transition-colors" href="tel:3014709186">
                             301 4709186
                         </a>
@@ -196,7 +218,7 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- Burgers (Large) -->
-<a href="Menu-Hamburguesa.html" class="md:col-span-8 group relative overflow-hidden bg-primary border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<a href="Menu-Hamburguesa.html" class="md:col-span-8 group relative overflow-hidden bg-primary border-4 border-black brutal-shadow brutal-shadow-hover h-72 md:h-[400px]">
 <img alt="Hamburguesas Gourmet" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiTJxvyY52x9RWHV4k8lWbJ_mFrpFiqorn5OmqWCVYZTN5c4SIjYWehtdxEWFw4zpP9AXf13VbLNDqSM6Gsr9US9-77JbuqSIRsTXZ0Qi-42PUo9BNCGPAG1Nj3hDYBTz0HKczpt9iZM4-TNhcsmBr9Tl5RWj3z5cONzzvQubkpC22RdHfk9--6jqRc7Jz2KuWa_I5fZh9h9sztr41ei84ckVWVZVHPbjrLHylRSkPtLuIVn4ucG3K-6_UiqnB0oS3TSSYO8o5jqg">
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 <div class="absolute bottom-md left-md p-md">
@@ -206,7 +228,7 @@
 </div>
 </a>
 <!-- Hot Dogs -->
-<a href="Menu_Perros.html" class="md:col-span-4 group relative overflow-hidden bg-secondary border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<a href="Menu_Perros.html" class="md:col-span-4 group relative overflow-hidden bg-secondary border-4 border-black brutal-shadow brutal-shadow-hover h-72 md:h-[400px]">
 <img alt="Perros Calientes Gourmet" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjvUAVsjZ2XMTXr6aQmYWiIywPAD9Jvg3RUwk7fBFNW2L6ETLKv8Ld17aMCX1wFb7--CIjncAVulHmA6l9ZjaF5hP4ubqUnutTNqYcnVZUc3YoaRMn2P1Rm5kEb2k2jJTqJqxpskNXW1gl9UdochGXtUVaHjqzwQwB4jGcmyMy072tjVT0FytNA6PvNpmxCIVlxG1XTkURVuVHve3q-ZV6EQkXSB8dz4XHuJBFUEaPvSIL7DrgBrKAgp9mR0dZqn4_AF9j0BeSDs">
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 <div class="absolute bottom-md left-md p-md">
@@ -217,7 +239,7 @@
 <!-- Pizzas -->
 
 <!-- Picadas (Formerly Call to Action space in grid, repurposed for the requested category) -->
-<a href="Menu_Picadas.html" class="md:col-span-8 group relative overflow-hidden bg-surface-container border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<a href="Menu_Picadas.html" class="md:col-span-8 group relative overflow-hidden bg-surface-container border-4 border-black brutal-shadow brutal-shadow-hover h-72 md:h-[400px]">
 <img alt="Picadas Locas" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvl4jXbRXfVSECAABlZHJJyuARhkR1SfjhcVS5hAKAEPQztfjgrejNuLV_xg1akB9_vXu8YnSDuYX6psxB-V3hndhJYL7xaR_MAhTNBmtDyOcmJ1AES2yGXwoAQu3dlCEznCdWzntfDy8VUXtPO5OueRLEL7A09En2islLUXPoY-OkkHIp3u-96o7falhnDlJGVx60X_7VD59LKKSSzm8-IkowJQ1Mb4jVFKiQFGiNCQvwSM6xizAAw8so-M5nyUu-aoCLzNRYJb0">
 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 <div class="absolute bottom-md left-md p-md">
@@ -225,7 +247,7 @@
 <p class="text-white font-body-md">Para compartir la locura con todos tus amigos.</p>
 </div>
 </a>
-<div class="md:col-span-4 flex flex-col justify-center items-center text-center p-md bg-primary-container border-4 border-black brutal-shadow brutal-shadow-hover h-[400px] relative overflow-hidden">
+<div class="md:col-span-4 flex flex-col justify-center items-center text-center p-md bg-primary-container border-4 border-black brutal-shadow brutal-shadow-hover min-h-[300px] md:h-[400px] relative overflow-hidden">
     <div class="absolute top-0 left-0 w-8 h-8 bg-primary border-r-2 border-b-2 border-black"></div>
     <div class="absolute bottom-0 right-0 w-8 h-8 bg-secondary border-l-2 border-t-2 border-black"></div>
     <span class="material-symbols-outlined text-on-primary-container text-[64px] mb-sm" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
@@ -258,10 +280,31 @@
 </footer>
 <!-- Floating Order Button (Mobile Only) -->
 <div class="md:hidden fixed bottom-margin-mobile right-margin-mobile z-50">
-<a class="w-16 h-16 bg-primary border-4 border-black rounded-full brutal-shadow flex items-center justify-center text-on-primary" href="Menu.html">
+        <button onclick="toggleCartModal()" class="w-16 h-16 bg-primary border-4 border-black rounded-full brutal-shadow flex items-center justify-center text-on-primary">
 <span class="material-symbols-outlined text-[32px]">shopping_cart</span>
-</a>
+        </button>
 </div>
+
+<!-- Carrito Modal -->
+<div id="cart-modal" class="fixed inset-0 z-[60] hidden">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCartModal()"></div>
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-surface border-l-4 border-black p-md flex flex-col shadow-[-8px_0px_0px_0px_rgba(0,0,0,1)]">
+        <div class="flex justify-between items-center mb-lg">
+            <h2 class="font-headline-md text-headline-md text-primary uppercase italic">Tu Pedido Loco</h2>
+            <button onclick="toggleCartModal()" class="material-symbols-outlined text-primary p-2">close</button>
+        </div>
+        <div id="cart-items" class="flex-grow overflow-y-auto space-y-md"></div>
+        <div class="mt-lg pt-lg border-t-4 border-black">
+            <div class="flex justify-between items-center mb-md">
+                <span class="font-headline-md text-headline-md uppercase text-secondary">Total:</span>
+                <span id="cart-total" class="font-price-display text-price-display text-tertiary">$0</span>
+            </div>
+            <button onclick="sendOrderWhatsApp()" class="w-full bg-primary text-on-primary font-headline-md py-md border-4 border-black brutal-shadow uppercase italic">Enviar a WhatsApp</button>
+        </div>
+    </div>
+</div>
+
+<script src="cart.js"></script>
 <script>
         // Micro-interactions
         document.querySelectorAll('.brutal-shadow-hover').forEach(button => {

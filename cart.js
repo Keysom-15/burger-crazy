@@ -10,6 +10,13 @@ function toggleCartModal() {
     }
 }
 
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+        menu.classList.toggle('hidden');
+    }
+}
+
 function toggleItemBtn(element) {
     // Busca el contenedor de acciones (para pizzas) o el botón directo (para otros menús)
     const target = element.querySelector('.action-container') || 

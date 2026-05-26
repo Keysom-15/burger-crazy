@@ -121,10 +121,10 @@
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
 <!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-50 bg-surface border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
-<div class="font-headline-lg text-headline-lg font-black text-primary italic tracking-tighter">
+<header class="sticky top-0 w-full z-50 bg-surface border-b-4 border-black shadow-[0px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<a href="index.html" class="font-headline-md text-headline-md font-black italic text-primary tracking-tighter uppercase">
             BURGER CRAZY
-        </div>
+</a>
 <nav class="hidden md:flex gap-md items-center">
 <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="index.html">Inicio</a>
 <a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Menu-Hamburguesa.html">Hamburguesas</a>
@@ -137,14 +137,36 @@
 <span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
 <span id="header-cart-count" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
 </button>
+<button onclick="toggleMobileMenu()" class="md:hidden material-symbols-outlined text-primary p-2 border-2 border-black brutal-shadow bg-surface-container-highest">
+    menu
+</button>
 </div>
 </header>
-<main class="pt-32 pb-xl px-margin-mobile md:px-margin-desktop min-h-screen">
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[70] hidden md:hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="toggleMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-64 bg-surface border-l-4 border-black p-md flex flex-col brutal-shadow">
+        <div class="flex justify-between items-center mb-lg">
+            <span class="font-headline-md text-primary italic uppercase">Navegación</span>
+            <button onclick="toggleMobileMenu()" class="material-symbols-outlined text-primary">close</button>
+        </div>
+        <nav class="flex flex-col gap-md">
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary" href="index.html">Inicio</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary border-b-2 border-black pb-2" href="Menu-Hamburguesa.html">Hamburguesas</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary border-b-2 border-black pb-2" href="Menu_Perros.html">Perros</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary border-b-2 border-black pb-2" href="Menu_Pizza.html">Pizzas</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary border-b-2 border-black pb-2" href="Menu_Picadas.html">Picadas</a>
+        </nav>
+    </div>
+</div>
+
+<main class="py-lg px-margin-mobile md:px-margin-desktop min-h-screen">
 <!-- Hero Section -->
 <section class="mb-lg">
 <div class="flex flex-col md:flex-row justify-between items-end gap-md">
 <div class="max-w-2xl">
-<h1 class="font-headline-xl text-headline-xl text-primary uppercase italic mb-sm">
+<h1 class="font-headline-xl text-5xl md:text-headline-xl text-primary uppercase italic mb-sm">
                         SIGUE CON HAMBRE, <br/><span class="text-secondary">¡SIGUE LOCO!</span>
 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg border-l-4 border-tertiary pl-md">
@@ -159,10 +181,10 @@
 </div>
 </section>
 <!-- Category Bento Grid -->
-<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:min-h-[800px]">
 <!-- Hamburguesas (Large Tile) -->
-<a class="group md:col-span-2 md:row-span-2 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-highest hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu-Hamburguesa.html">
-<img alt="Hamburguesas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXdPSwiaI6joWsQoHGuPnmsZNnLb_CRa8fMY0SH_MoOpHFc6nXzoZqu2J_hmLbstaQCZCQVwMwUxwdaCQbmaaCDtC5v2SVchS7qcp4r_262XbTRsHWx1pCyyndBTR_hOyIAMftDxC1eKvbspXNxlln13lFe91NKn6s_Tjoy_gJgZTBUQRp_VJ83a8EmHVBvChleL3xy6lpvNX26lmhr5sPmN6rofijorBsTNywrYS2n-rTU9b1Fpfn8Xjs7u5Fuz2RQNQsjpB9Q_g"/>
+<a class="group md:col-span-2 md:row-span-2 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-highest hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200 h-96 md:h-auto" href="Menu-Hamburguesa.html">
+<img alt="Hamburguesas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiTJxvyY52x9RWHV4k8lWbJ_mFrpFiqorn5OmqWCVYZTN5c4SIjYWehtdxEWFw4zpP9AXf13VbLNDqSM6Gsr9US9-77JbuqSIRsTXZ0Qi-42PUo9BNCGPAG1Nj3hDYBTz0HKczpt9iZM4-TNhcsmBr9Tl5RWj3z5cONzzvQubkpC22RdHfk9--6jqRc7Jz2KuWa_I5fZh9h9sztr41ei84ckVWVZVHPbjrLHylRSkPtLuIVn4ucG3K-6_UiqnB0oS3TSSYO8o5jqg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-lg w-full">
 <div class="bg-primary text-on-primary inline-block font-label-bold px-sm py-xs mb-sm border-2 border-black uppercase">Lo más popular</div>
@@ -171,8 +193,8 @@
 </div>
 </a>
 <!-- Perros Calientes -->
-<a class="group md:col-span-2 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-high hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Perros.html">
-<img alt="Perros Calientes" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe6otazBrNEgPuel4pVZDfLiubm0bFukP3eWxAT4hw2zHLUKh4USb3Ba9VrMajtlpAmVHC5FmFpj_hAS4kxVPTJ8oh3jaCnhFTqwZtiqvEuC_ea9rVK-Yif7GRn-_rv61tFR4IBZpFWSU_8OeqSP4GAxmy1eUuK2LJoq66oCKDqsDysNdzQ0zbCu5Z62AOtk2oHoWWNntvqfanuC7GsRrpSS4it8FD641g5kFTfsDeM1cxxjwWPqcv-MRNM4Ws4vlDMQuv2QgE7_o"/>
+<a class="group md:col-span-2 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-high hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200 h-72 md:h-auto" href="Menu_Perros.html">
+<img alt="Perros Calientes" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjvUAVsjZ2XMTXr6aQmYWiIywPAD9Jvg3RUwk7fBFNW2L6ETLKv8Ld17aMCX1wFb7--CIjncAVulHmA6l9ZjaF5hP4ubqUnutTNqYcnVZUc3YoaRMn2P1Rm5kEb2k2jJTqJqxpskNXW1gl9UdochGXtUVaHjqzwQwB4jGcmyMy072tjVT0FytNA6PvNpmxCIVlxG1XTkURVuVHve3q-ZV6EQkXSB8dz4XHuJBFUEaPvSIL7DrgBrKAgp9mR0dZqn4_AF9j0BeSDs"/>
 <div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
 <div class="absolute inset-0 flex flex-col justify-center p-md">
 <h2 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">PERROS CALIENTES</h2>
@@ -181,8 +203,8 @@
 </div>
 </a>
 <!-- Pizzas -->
-<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Pizza.html">
-<img alt="Pizzas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3SSXcehNCkOr7EjPOTemTOL9pjMiGzYClqXQgneUSbp0PTihfAT5j9fWO9LPQt6yyyShWAZLUKYKcvROnsKh7xk99S8jtdVQZgbgzkW8G0T4Rog9yjRjDo_uJb_1luDZMZCxaGKvlSfhHwHZfybb33FVBVQXX0cTGU-VMhsE5sZvXXBdYhBzyqqKVOKtJAL2O8kpk-ekcXntv7gSDGktMY_5DB_s8-iLR2wABOpFe7iwzRw3U68fHAkf6zdEjJBG_SaK1eiLDYI"/>
+<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200 h-64 md:h-auto" href="Menu_Pizza.html">
+<img alt="Pizzas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg6Gx4gP8QE3zAlEV0vVo0amjNGmpJYkFJo-YSpY1pIZ8mcfUaO7LaZ_m_L1CWYcdTWN8R9D0740Ot4CwW1ESS9zYCRu9vH3gwVQISROp5CLjoGlnqpdEX0L3D70lQ-xlWdh8G5FHtiEx00GgA7Rsbkssk-4IxcyRfVhDYWfiqD8Ev5zlOmcmg6OzZajtW_5-v0VFNegtaFpDIfil9QMR4FI_xHxFwiojlCKSuFKrufJKLOSKHwuFzHQmMkx1IF7dYGbjBYvJjf1M"/>
 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-sm">
 <h2 class="font-headline-md text-headline-md text-white uppercase italic">PIZZAS</h2>
@@ -190,8 +212,8 @@
 </div>
 </a>
 <!-- Picadas -->
-<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-low hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Picadas.html">
-<img alt="Picadas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdLGffCgc-zTscTv7gSfU5MDgWjx55y3qR4VGl7QwdMUdxoTG3OAksIEsaTdB2VKxxjR7DYxJJ_bp1pPzkGwALS0p4pYNlwYhsF1Myy0cl9ltI8LqPASKLX4SdfH-a6M-sAX1XxsGpbODqVh94E2oOQ45JbCDVuVDtpuK1rmoAw0pK-EFgkJ4eB2gtmWuPnMhnF3d-qSkta5slNXXUBuV9_HPtXNGhZao_RBt-MHJW41dEBdljDepNjU-uB4ulUyUQkCSVGfXIpNI"/>
+<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-low hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200 h-64 md:h-auto" href="Menu_Picadas.html">
+<img alt="Picadas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvl4jXbRXfVSECAABlZHJJyuARhkR1SfjhcVS5hAKAEPQztfjgrejNuLV_xg1akB9_vXu8YnSDuYX6psxB-V3hndhJYL7xaR_MAhTNBmtDyOcmJ1AES2yGXwoAQu3dlCEznCdWzntfDy8VUXtPO5OueRLEL7A09En2islLUXPoY-OkkHIp3u-96o7falhnDlJGVx60X_7VD59LKKSSzm8-IkowJQ1Mb4jVFKiQFGiNCQvwSM6xizAAw8so-M5nyUu-aoCLzNRYJb0"/>
 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
 <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-sm">
 <h2 class="font-headline-md text-headline-md text-white uppercase italic">PICADAS</h2>
@@ -234,4 +256,5 @@
 <a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
 </div>
 </footer>
+<script src="cart.js"></script>
 </body></html>

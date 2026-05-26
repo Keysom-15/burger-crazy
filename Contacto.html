@@ -132,13 +132,33 @@
 <button onclick="window.location.href='Menu.html'" class="bg-primary-container text-on-primary-container px-md py-sm border-2 border-black font-label-bold brutal-shadow brutal-shadow-hover active:translate-y-1 transition-all uppercase">
             ¡PIDE AHORA!
         </button>
+<button onclick="toggleMobileMenu()" class="md:hidden material-symbols-outlined text-primary p-2 border-2 border-black brutal-shadow bg-surface-container-highest">
+    menu
+</button>
 </div>
 </nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[70] hidden md:hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="toggleMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-64 bg-surface border-l-4 border-black p-md flex flex-col brutal-shadow">
+        <div class="flex justify-between items-center mb-lg">
+            <span class="font-headline-md text-primary italic uppercase">Navegación</span>
+            <button onclick="toggleMobileMenu()" class="material-symbols-outlined text-primary">close</button>
+        </div>
+        <nav class="flex flex-col gap-md">
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary" href="index.html">Inicio</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface hover:text-primary" href="Menu.html">Menú</a>
+            <a class="font-headline-md text-xl font-bold text-primary underline decoration-4 underline-offset-4" href="Contacto.html">Contacto</a>
+        </nav>
+    </div>
+</div>
+
 <main class="min-h-screen">
 <!-- Hero Section with Mascot -->
-<section class="relative px-margin-desktop py-xl flex flex-col md:flex-row items-center gap-lg overflow-hidden">
+<section class="relative px-margin-mobile md:px-margin-desktop py-xl flex flex-col md:flex-row items-center gap-lg overflow-hidden">
 <div class="flex-1 z-10">
-<h1 class="font-headline-xl text-headline-xl text-primary mb-md">
+<h1 class="font-headline-xl text-5xl md:text-headline-xl text-primary mb-md">
                     ¿HAMBRE DE <br><span class="text-secondary italic">LOCURA?</span>
 </h1>
 <p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant mb-lg">

@@ -166,8 +166,28 @@
     shopping_cart
     <span id="header-cart-count" class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
 </button>
+<button onclick="toggleMobileMenu()" class="md:hidden material-symbols-outlined text-primary p-2 border-2 border-black brutal-shadow bg-surface-container-highest">
+    menu
+</button>
 </div>
 </header>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[70] hidden md:hidden">
+    <div class="absolute inset-0 bg-black/90 backdrop-blur-md" onclick="toggleMobileMenu()"></div>
+    <div class="absolute right-0 top-0 h-full w-64 bg-surface border-l-4 border-black p-md flex flex-col brutal-shadow">
+        <div class="flex justify-between items-center mb-lg">
+            <span class="font-headline-md text-primary italic uppercase">Menú</span>
+            <button onclick="toggleMobileMenu()" class="material-symbols-outlined text-primary">close</button>
+        </div>
+        <nav class="flex flex-col gap-md">
+            <a class="font-headline-md text-xl font-bold text-on-surface" href="index.html">Inicio</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface" href="Menu-Hamburguesa.html">Hamburguesas</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface" href="Menu_Perros.html">Perros</a>
+            <a class="font-headline-md text-xl font-bold text-on-surface" href="Menu_Pizza.html">Pizzas</a>
+            <a class="font-headline-md text-xl font-bold text-secondary" href="Menu_Picadas.html">Picadas</a>
+        </nav>
+    </div>
+</div>
 <main class="min-h-screen flex flex-col md:flex-row">
 <!-- Hero Image Section (Left) -->
 <section class="w-full md:w-1/2 min-h-[50vh] md:h-[calc(100vh-80px)] relative overflow-hidden bg-surface-container flex items-center justify-center border-r-0 md:border-r-4 border-black">
@@ -321,18 +341,18 @@
 </footer>
 <!-- Mobile Navigation -->
 <nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container-highest border-t-4 border-black shadow-[0px_-4px_0px_0px_rgba(0,0,0,1)] rounded-t-full">
-<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<button onclick="window.location.href='index.html'" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
 <span class="material-symbols-outlined" data-icon="home">home</span>
 <span class="font-label-bold text-[10px] uppercase">Inicio</span>
-</div>
-<div class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-full p-2 scale-110 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-all">
+</button>
+<button onclick="window.location.href='Menu.html'" class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-full p-2 scale-110 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-all">
 <span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
 <span class="font-label-bold text-[10px] uppercase">Menú</span>
-</div>
-<div onclick="toggleCartModal()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95 cursor-pointer">
+</button>
+<button onclick="toggleCartModal()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
 <span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
 <span class="font-label-bold text-[10px] uppercase">Carrito</span>
-</div>
+</button>
 </nav>
 
     <!-- Carrito Modal (Drawer) -->

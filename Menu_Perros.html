@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BURGER CRAZY - PERROS CALIENTES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Space+Grotesk:wght@700&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#ffdf9e",
+                    "tertiary": "#fabd00",
+                    "on-surface-variant": "#e4bdc2",
+                    "on-secondary-fixed-variant": "#004e59",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#004650",
+                    "surface-bright": "#39393a",
+                    "background": "#131314",
+                    "surface-variant": "#353436",
+                    "primary-fixed-dim": "#ffb2be",
+                    "on-primary-fixed-variant": "#900038",
+                    "secondary": "#44d8f1",
+                    "surface-container-low": "#1b1b1c",
+                    "on-primary": "#660025",
+                    "on-tertiary-container": "#372700",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#5b3f43",
+                    "surface-container": "#1f1f20",
+                    "on-background": "#e5e2e3",
+                    "surface-tint": "#ffb2be",
+                    "surface-container-highest": "#353436",
+                    "surface-container-lowest": "#0e0e0f",
+                    "surface": "#131314",
+                    "outline": "#ab888c",
+                    "on-primary-container": "#5a0020",
+                    "on-tertiary-fixed": "#261a00",
+                    "on-error": "#690005",
+                    "surface-dim": "#131314",
+                    "secondary-container": "#00bcd4",
+                    "inverse-on-surface": "#303031",
+                    "surface-container-high": "#2a2a2b",
+                    "secondary-fixed": "#a1efff",
+                    "primary-container": "#ff4e7c",
+                    "on-secondary": "#00363e",
+                    "on-primary-fixed": "#400014",
+                    "on-surface": "#e5e2e3",
+                    "on-secondary-fixed": "#001f25",
+                    "primary": "#ffb2be",
+                    "error-container": "#93000a",
+                    "on-tertiary": "#3f2e00",
+                    "tertiary-fixed-dim": "#fabd00",
+                    "inverse-surface": "#e5e2e3",
+                    "secondary-fixed-dim": "#44d8f1",
+                    "primary-fixed": "#ffd9de",
+                    "inverse-primary": "#bc004b",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary-container": "#b78a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "margin-mobile": "16px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "md": "24px",
+                    "margin-desktop": "64px",
+                    "gutter": "20px",
+                    "lg": "48px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "price-display": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "label-bold": ["Space Grotesk"],
+                    "headline-lg": ["Anybody"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "headline-md": ["Anybody"]
+            },
+            "fontSize": {
+                    "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .serrated-border {
+            mask-image: url("data:image/svg+xml,%3Csvg width='40' height='20' viewBox='0 0 40 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 L10 0 L20 20 L30 0 L40 20 Z' fill='black'/%3E%3C/svg%3E");
+            mask-repeat: repeat-x;
+            mask-size: 20px 10px;
+        }
+        .neo-brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .active-nav-shadow {
+            box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+        }
+        .hover-lift:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+        .hover-lift:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+        }
+        .neon-glow-pink {
+            text-shadow: 0 0 10px #ff4e7c, 0 0 20px #ff4e7c;
+        }
+        .neon-glow-cyan {
+            text-shadow: 0 0 10px #44d8f1, 0 0 20px #44d8f1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface border-b-4 border-black shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex items-center gap-base">
+<a href="Inicio.html" class="font-headline-md text-headline-md font-black italic text-primary tracking-tighter uppercase">BURGER CRAZY</a>
+</div>
+<nav class="hidden md:flex gap-md">
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Inicio.html">Inicio</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu-Hamburguesa.html">Hamburguesas</a>
+<a class="font-label-bold text-label-bold uppercase text-secondary underline decoration-4 underline-offset-8" href="Menu_Perros.html">Perros</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu_Pizza.html">Pizzas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu_Picadas.html">Picadas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-md">
+<button onclick="toggleCartModal()" class="relative material-symbols-outlined text-primary hover:bg-primary-container hover:text-on-primary-container p-2 rounded-xl transition-all active:translate-y-1">
+    shopping_cart
+    <span id="header-cart-count" class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-80px)]">
+<!-- Left: Hero Image Content -->
+<div class="relative bg-surface-container-low flex items-center justify-center p-margin-mobile md:p-margin-desktop overflow-hidden">
+<!-- Mascot Peek -->
+<div class="absolute -top-10 -left-10 w-40 h-40 opacity-20 rotate-12" style="transform: translate(6.42px, -13.52px) rotate(12deg);">
+<img alt="Mascot Decoration" class="w-full h-full grayscale invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxIEN-GDO0iTppGuHIEMpcRMWkrSSGQXuQ1LAXpEGhJOZjH8bc8ac24RJDa4hTD61Mjck7K8RM3yFtnIy7qXWzT2zvq_ABis-VqNJRasgABI_Dn6j3eoRrqc27dzrb4b56rqxsj2tRBwLOTjavdVdoQ-32dNz0D0eaaA13pa6mXlmZYC06ZR-oOj0Gc9lbHmhMIAzGZIxa9549x2zF03e3QE2Kgkq2-2MvaneerlME-x97RYg-Hym-pDSS1aQWyGl3fSJNJ6VQPNw"/>
+</div>
+<div class="relative z-10 w-full max-w-2xl transform hover:scale-105 transition-transform duration-500">
+<img alt="Gourmet Hot Dog" class="w-full h-auto rounded-xl border-4 border-black neo-brutal-shadow object-cover aspect-square md:aspect-video lg:aspect-square" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcW7oxIClrob2yUmb06qsy3nH2E5k4YQj0AlB-Hvtnr5jMdJfVwrEsqXNe-J1uRyd6gwZHnTb8GFhCAY51exDjo2h9znlmLowgfGKb7TPQ3ZkTsZRgV-FkHuDky_d8DJO1JrPZ8aseDRD-I8JmKGUPC7b_IPD4j51Vfty3huji-jy_eZXk-hLEGfeexA-xExz1TjpJLAGrRDZFt5hzcbANa902O4E1GAxhQ1VzHGqg2iB0bX_zL9JiueEbgn4vY6ENvnueVPbBpLA"/>
+<div class="absolute -bottom-6 -right-6 bg-tertiary text-black font-price-display text-price-display px-lg py-sm border-4 border-black neo-brutal-shadow -rotate-3 uppercase">
+                        FESTÍN LOCO
+                    </div>
+</div>
+<!-- Floating Elements (Simulating the fries/neon feel of reference) -->
+<div class="absolute top-20 right-10 w-16 h-2 bg-secondary rotate-45 blur-[2px] opacity-50"></div>
+<div class="absolute bottom-40 left-10 w-24 h-3 bg-primary-container -rotate-12 blur-[1px] opacity-40"></div>
+</div>
+<!-- Right: Menu Content -->
+<div class="bg-background p-margin-mobile md:p-margin-desktop flex flex-col justify-center border-l-0 lg:border-l-4 border-black">
+<header class="mb-lg">
+<h1 class="font-headline-xl text-headline-xl text-secondary-fixed neon-glow-cyan uppercase mb-xs">PERROS CALIENTES</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Los perros más locos de la ciudad. Cargados con queso suizo premium, salsas secretas y nuestro toque crujiente inigualable.</p>
+</header>
+<div class="space-y-base mb-xl">
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Perro Sencillo</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Clásico Loco Básico</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$7.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Perro Sencillo', 7000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Perro Super</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Doble queso y ripio</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$8.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Perro Super', 8000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary">Perro Suizo</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Queso suizo fundido</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$12.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Perro Suizo', 12000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Chori Perro</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Salchicha de chorizo ahumado</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$12.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Chori Perro', 12000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Ranchero</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Tocineta, frijoles y maicitos</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$13.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Ranchero', 13000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Mega Crazy</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Con todo y más</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$14.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Mega Crazy', 14000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+</div><div class="mt-lg mb-xl">
+<h2 class="font-headline-md text-headline-md text-primary neon-glow-pink uppercase mb-md">Burritos</h2>
+<div class="space-y-base">
+<div onclick="toggleItemBtn(this)" class="flex flex-col group cursor-pointer py-2 hover:bg-surface-container-high transition-colors px-2 rounded-lg">
+    <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col">
+            <span class="font-label-bold text-headline-md text-on-surface group-hover:text-primary transition-colors">Burrito Mixto</span>
+            <span class="text-xs text-on-surface-variant font-label-bold uppercase">Pollo, carne, chorizo, salsas, lechuga, cebolla, maíz</span>
+        </div>
+        <div class="flex-grow border-b-2 border-dotted border-outline-variant mx-4 mb-2"></div>
+        <span class="font-price-display text-price-display text-tertiary">$14.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Burrito Mixto', 14000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-md items-center">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-secondary">info</span>
+<span class="font-label-bold text-xs uppercase text-on-surface-variant">Domicilio gratis en pedidos superiores a $50.000</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Upsell Bento Grid -->
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-md border-t-4 border-black py-xl bg-surface-container-lowest">
+<div class="flex flex-col items-center md:items-start gap-xs">
+<a href="Inicio.html" class="font-headline-md text-headline-md text-primary font-black italic uppercase tracking-tighter">BURGER CRAZY</a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 BURGER CRAZY. UNAPOLOGETICALLY LOUD.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container-highest border-t-4 border-black shadow-[0px_-4px_0px_0px_rgba(0,0,0,1)] rounded-t-full">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px] uppercase">Inicio</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-full p-2 scale-110 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-all">
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>restaurant</span>
+<span class="font-label-bold text-[10px] uppercase">Menú</span>
+</button>
+<button onclick="toggleCartModal()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-label-bold text-[10px] uppercase">Carrito</span>
+</button>
+</nav>
+
+    <script src="cart.js"></script>
+</body></html>

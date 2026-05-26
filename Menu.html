@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BURGER CRAZY | MENÚ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b1c",
+                        "surface-container": "#1f1f20",
+                        "secondary-fixed-dim": "#44d8f1",
+                        "primary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#ffd9de",
+                        "inverse-surface": "#e5e2e3",
+                        "on-secondary": "#00363e",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e5e2e3",
+                        "primary": "#ffb2be",
+                        "error-container": "#93000a",
+                        "surface-tint": "#ffb2be",
+                        "inverse-on-surface": "#303031",
+                        "tertiary-fixed": "#ffdf9e",
+                        "on-secondary-fixed": "#001f25",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#fabd00",
+                        "on-primary-container": "#5a0020",
+                        "primary-container": "#ff4e7c",
+                        "outline": "#ab888c",
+                        "on-surface": "#e5e2e3",
+                        "on-surface-variant": "#e4bdc2",
+                        "surface-container-lowest": "#0e0e0f",
+                        "on-primary": "#660025",
+                        "surface-variant": "#353436",
+                        "surface-container-highest": "#353436",
+                        "outline-variant": "#5b3f43",
+                        "inverse-primary": "#bc004b",
+                        "tertiary": "#fabd00",
+                        "surface": "#131314",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-secondary-container": "#004650",
+                        "tertiary-container": "#b78a00",
+                        "surface-dim": "#131314",
+                        "surface-bright": "#39393a",
+                        "on-tertiary": "#3f2e00",
+                        "secondary-container": "#00bcd4",
+                        "background": "#131314",
+                        "secondary-fixed": "#a1efff",
+                        "secondary": "#44d8f1",
+                        "surface-container-high": "#2a2a2b",
+                        "on-primary-fixed": "#400014",
+                        "on-secondary-fixed-variant": "#004e59",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-tertiary-container": "#372700",
+                        "on-error": "#690005",
+                        "on-primary-fixed-variant": "#900038"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "md": "24px",
+                        "gutter": "20px",
+                        "sm": "12px",
+                        "margin-mobile": "16px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "price-display": ["Anybody"],
+                        "headline-xl": ["Anybody"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Anybody"],
+                        "headline-lg": ["Anybody"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-bold": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .brutal-shadow-hover:hover {
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+            transform: translate(4px, 4px);
+        }
+        .zig-zag-divider {
+            height: 12px;
+            width: 100%;
+            background-image: linear-gradient(45deg, #131314 25%, transparent 25%), linear-gradient(-45deg, #131314 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #131314 75%), linear-gradient(-45deg, transparent 75%, #131314 75%);
+            background-size: 20px 20px;
+            background-color: #ffb2be;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="font-headline-lg text-headline-lg font-black text-primary italic tracking-tighter">
+            BURGER CRAZY
+        </div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Inicio.html">Inicio</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Menu-Hamburguesa.html">Hamburguesas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Menu_Perros.html">Perros</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Menu_Pizza.html">Pizzas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-primary transition-all" href="Menu_Picadas.html">Picadas</a>
+</nav>
+<div class="flex gap-sm items-center">
+<button onclick="toggleCartModal()" class="relative p-2 border-2 border-black bg-surface-container-highest brutal-shadow brutal-shadow-hover transition-all">
+<span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+<span id="header-cart-count" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-xl px-margin-mobile md:px-margin-desktop min-h-screen">
+<!-- Hero Section -->
+<section class="mb-lg">
+<div class="flex flex-col md:flex-row justify-between items-end gap-md">
+<div class="max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase italic mb-sm">
+                        SIGUE CON HAMBRE, <br/><span class="text-secondary">¡SIGUE LOCO!</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg border-l-4 border-tertiary pl-md">
+                        Bienvenidos al templo de la comida callejera exagerada. Aquí no pedimos perdón por el sabor, ¡pedimos servilletas extra!
+                    </p>
+</div>
+<div class="hidden lg:block">
+<div class="bg-tertiary p-4 border-4 border-black brutal-shadow -rotate-3 hover:rotate-0 transition-transform">
+<span class="font-label-bold text-black text-xl">PROMO DEL DÍA: 2X1 EN PERROS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-gutter h-auto md:h-[800px]">
+<!-- Hamburguesas (Large Tile) -->
+<a class="group md:col-span-2 md:row-span-2 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-highest hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu-Hamburguesa.html">
+<img alt="Hamburguesas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXdPSwiaI6joWsQoHGuPnmsZNnLb_CRa8fMY0SH_MoOpHFc6nXzoZqu2J_hmLbstaQCZCQVwMwUxwdaCQbmaaCDtC5v2SVchS7qcp4r_262XbTRsHWx1pCyyndBTR_hOyIAMftDxC1eKvbspXNxlln13lFe91NKn6s_Tjoy_gJgZTBUQRp_VJ83a8EmHVBvChleL3xy6lpvNX26lmhr5sPmN6rofijorBsTNywrYS2n-rTU9b1Fpfn8Xjs7u5Fuz2RQNQsjpB9Q_g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-lg w-full">
+<div class="bg-primary text-on-primary inline-block font-label-bold px-sm py-xs mb-sm border-2 border-black uppercase">Lo más popular</div>
+<h2 class="font-headline-lg text-headline-lg text-white mb-md">HAMBURGUESAS <br/> <span class="text-primary italic">LAS MÁS LOCAS</span></h2>
+<button class="bg-primary text-on-primary font-headline-md px-md py-sm border-4 border-black brutal-shadow brutal-shadow-hover transition-all uppercase">VER MENÚ</button>
+</div>
+</a>
+<!-- Perros Calientes -->
+<a class="group md:col-span-2 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-high hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Perros.html">
+<img alt="Perros Calientes" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe6otazBrNEgPuel4pVZDfLiubm0bFukP3eWxAT4hw2zHLUKh4USb3Ba9VrMajtlpAmVHC5FmFpj_hAS4kxVPTJ8oh3jaCnhFTqwZtiqvEuC_ea9rVK-Yif7GRn-_rv61tFR4IBZpFWSU_8OeqSP4GAxmy1eUuK2LJoq66oCKDqsDysNdzQ0zbCu5Z62AOtk2oHoWWNntvqfanuC7GsRrpSS4it8FD641g5kFTfsDeM1cxxjwWPqcv-MRNM4Ws4vlDMQuv2QgE7_o"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-center p-md">
+<h2 class="font-headline-md text-headline-md text-secondary uppercase mb-sm">PERROS CALIENTES</h2>
+<p class="font-label-bold text-white mb-md">SABOR EXPLOSIVO</p>
+<div class="w-fit bg-secondary text-on-secondary px-md py-xs border-2 border-black font-label-bold uppercase">QUIERO ESTO</div>
+</div>
+</a>
+<!-- Pizzas -->
+<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Pizza.html">
+<img alt="Pizzas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAk3SSXcehNCkOr7EjPOTemTOL9pjMiGzYClqXQgneUSbp0PTihfAT5j9fWO9LPQt6yyyShWAZLUKYKcvROnsKh7xk99S8jtdVQZgbgzkW8G0T4Rog9yjRjDo_uJb_1luDZMZCxaGKvlSfhHwHZfybb33FVBVQXX0cTGU-VMhsE5sZvXXBdYhBzyqqKVOKtJAL2O8kpk-ekcXntv7gSDGktMY_5DB_s8-iLR2wABOpFe7iwzRw3U68fHAkf6zdEjJBG_SaK1eiLDYI"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-sm">
+<h2 class="font-headline-md text-headline-md text-white uppercase italic">PIZZAS</h2>
+<span class="text-tertiary font-label-bold">SALVAJE Y QUESUDO</span>
+</div>
+</a>
+<!-- Picadas -->
+<a class="group md:col-span-1 md:row-span-1 relative overflow-hidden border-4 border-black brutal-shadow bg-surface-container-low hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all duration-200" href="Menu_Picadas.html">
+<img alt="Picadas" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdLGffCgc-zTscTv7gSfU5MDgWjx55y3qR4VGl7QwdMUdxoTG3OAksIEsaTdB2VKxxjR7DYxJJ_bp1pPzkGwALS0p4pYNlwYhsF1Myy0cl9ltI8LqPASKLX4SdfH-a6M-sAX1XxsGpbODqVh94E2oOQ45JbCDVuVDtpuK1rmoAw0pK-EFgkJ4eB2gtmWuPnMhnF3d-qSkta5slNXXUBuV9_HPtXNGhZao_RBt-MHJW41dEBdljDepNjU-uB4ulUyUQkCSVGfXIpNI"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-sm">
+<h2 class="font-headline-md text-headline-md text-white uppercase italic">PICADAS</h2>
+<span class="text-primary font-label-bold">PARA COMPARTIR</span>
+</div>
+</a>
+</section>
+<!-- Divider -->
+<div class="my-xl zig-zag-divider border-y-4 border-black"></div>
+<!-- Featured Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container p-lg border-4 border-black brutal-shadow">
+<span class="material-symbols-outlined text-primary text-4xl mb-md" data-icon="local_shipping">local_shipping</span>
+<h3 class="font-headline-md text-headline-md text-white mb-sm uppercase">DOMICILIO VELOZ</h3>
+<p class="text-on-surface-variant font-body-md">Llegamos antes de que se te pase el antojo. Cobertura en toda la ciudad.</p>
+</div>
+<div class="bg-primary text-on-primary p-lg border-4 border-black brutal-shadow -rotate-1">
+<span class="material-symbols-outlined text-4xl mb-md" data-icon="restaurant" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h3 class="font-headline-md text-headline-md mb-sm uppercase">INGREDIENTES TOP</h3>
+<p class="font-body-md font-bold">Carne 100% Angus y pan artesanal horneado todos los días.</p>
+</div>
+<div class="bg-secondary text-on-secondary p-lg border-4 border-black brutal-shadow rotate-1">
+<span class="material-symbols-outlined text-4xl mb-md" data-icon="celebration">celebration</span>
+<h3 class="font-headline-md text-headline-md mb-sm uppercase">EVENTOS LOCOS</h3>
+<p class="font-body-md font-bold">¿Tienes una fiesta? ¡Llevamos la locura a tu casa!</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest dark:bg-black border-t-4 border-black py-lg px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<div class="font-headline-md text-headline-md text-primary font-black italic uppercase tracking-tighter">
+                BURGER CRAZY
+            </div>
+<p class="text-on-surface-variant font-body-md text-body-md uppercase">© 2026 BURGER CRAZY. SIGUE CON HAMBRE.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BURGER CRAZY - Menú de Picadas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Space+Grotesk:wght@700&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdf9e",
+                        "tertiary": "#fabd00",
+                        "on-surface-variant": "#e4bdc2",
+                        "on-secondary-fixed-variant": "#004e59",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#004650",
+                        "surface-bright": "#39393a",
+                        "background": "#131314",
+                        "surface-variant": "#353436",
+                        "primary-fixed-dim": "#ffb2be",
+                        "on-primary-fixed-variant": "#900038",
+                        "secondary": "#44d8f1",
+                        "surface-container-low": "#1b1b1c",
+                        "on-primary": "#660025",
+                        "on-tertiary-container": "#372700",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#5b3f43",
+                        "surface-container": "#1f1f20",
+                        "on-background": "#e5e2e3",
+                        "surface-tint": "#ffb2be",
+                        "surface-container-highest": "#353436",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface": "#131314",
+                        "outline": "#ab888c",
+                        "on-primary-container": "#5a0020",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-error": "#690005",
+                        "surface-dim": "#131314",
+                        "secondary-container": "#00bcd4",
+                        "inverse-on-surface": "#303031",
+                        "surface-container-high": "#2a2a2b",
+                        "secondary-fixed": "#a1efff",
+                        "primary-container": "#ff4e7c",
+                        "on-secondary": "#00363e",
+                        "on-primary-fixed": "#400014",
+                        "on-surface": "#e5e2e3",
+                        "on-secondary-fixed": "#001f25",
+                        "primary": "#ffb2be",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#3f2e00",
+                        "tertiary-fixed-dim": "#fabd00",
+                        "inverse-surface": "#e5e2e3",
+                        "secondary-fixed-dim": "#44d8f1",
+                        "primary-fixed": "#ffd9de",
+                        "inverse-primary": "#bc004b",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "tertiary-container": "#b78a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "gutter": "20px",
+                        "lg": "48px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "price-display": ["Anybody"],
+                        "headline-xl": ["Anybody"],
+                        "label-bold": ["Space Grotesk"],
+                        "headline-lg": ["Anybody"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Anybody"]
+                    },
+                    "fontSize": {
+                        "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        
+        .brutal-shadow-hover:active {
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+            transform: translate(4px, 4px);
+        }
+
+        .zigzag-divider {
+            height: 24px;
+            width: 100%;
+            background-color: transparent;
+            background-image: linear-gradient(135deg, #131314 25%, transparent 25%), 
+                              linear-gradient(225deg, #131314 25%, transparent 25%), 
+                              linear-gradient(45deg, #131314 25%, transparent 25%), 
+                              linear-gradient(315deg, #131314 25%, transparent 25%);
+            background-position: 12px 0, 12px 0, 0 0, 0 0;
+            background-size: 24px 24px;
+            background-repeat: repeat-x;
+        }
+
+        .neon-text-fuchsia {
+            text-shadow: 0 0 10px #ff4e7c, 0 0 20px #ff4e7c;
+        }
+
+        .neon-text-cyan {
+            text-shadow: 0 0 10px #44d8f1, 0 0 20px #44d8f1;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #1b1b1c;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #44d8f1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface dark:bg-surface border-b-4 border-black shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex items-center gap-base">
+<a href="Inicio.html" class="font-headline-md text-headline-md font-black italic text-primary dark:text-primary tracking-tighter uppercase">BURGER CRAZY</a>
+</div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-on-surface dark:text-on-surface hover:text-secondary-fixed transition-colors font-label-bold text-label-bold uppercase" href="Inicio.html">Inicio</a>
+<a class="text-on-surface dark:text-on-surface hover:text-secondary-fixed transition-colors font-label-bold text-label-bold uppercase" href="Menu-Hamburguesa.html">Hamburguesas</a>
+<a class="text-on-surface dark:text-on-surface hover:text-secondary-fixed transition-colors font-label-bold text-label-bold uppercase" href="Menu_Perros.html">Perros</a>
+<a class="text-on-surface dark:text-on-surface hover:text-secondary-fixed transition-colors font-label-bold text-label-bold uppercase" href="Menu_Pizza.html">Pizzas</a>
+<a class="text-secondary dark:text-secondary underline decoration-4 underline-offset-8 font-label-bold text-label-bold uppercase" href="Menu_Picadas.html">Picadas</a>
+<a class="text-on-surface dark:text-on-surface hover:text-secondary-fixed transition-colors font-label-bold text-label-bold uppercase" href="Contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button onclick="toggleCartModal()" class="relative material-symbols-outlined p-2 text-primary hover:bg-primary-container hover:text-on-primary-container transition-all brutal-shadow-hover">
+    shopping_cart
+    <span id="header-cart-count" class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen flex flex-col md:flex-row">
+<!-- Hero Image Section (Left) -->
+<section class="w-full md:w-1/2 min-h-[50vh] md:h-[calc(100vh-80px)] relative overflow-hidden bg-surface-container flex items-center justify-center border-r-0 md:border-r-4 border-black">
+<!-- Animated Background Effects -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="absolute top-10 left-10 w-32 h-1 bg-primary rotate-45 animate-pulse shadow-[0_0_20px_#ff4e7c]"></div>
+<div class="absolute top-40 right-20 w-48 h-1 bg-secondary -rotate-12 animate-pulse shadow-[0_0_20px_#44d8f1]"></div>
+<div class="absolute bottom-20 left-1/4 w-64 h-1 bg-tertiary rotate-[75deg] animate-pulse"></div>
+</div>
+<!-- Main Picada Image -->
+<div class="relative z-10 p-margin-mobile md:p-margin-desktop group">
+<div class="absolute -top-10 -right-5 bg-tertiary text-on-tertiary px-md py-sm font-price-display text-price-display brutal-shadow rotate-12 z-20">
+                    ¡TAMAÑO LOCO!
+                </div>
+<img alt="Large Picada Platter" class="max-w-full h-auto drop-shadow-[20px_20px_0px_rgba(0,0,0,1)] transform transition-transform group-hover:scale-105 duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJSDedFYOoNuw7VMITYKNK4zjwU76OcFT5IQnEGKk78z5bOUFWdjMB1TE1hdYCl0cFljHr-WCzLe3ZCBqlCtXrB8weVfRGBxweh_T5Lz2ixisJP75rFd1xcE37hhb6kDwNLo6AsuuLvZxd-LTT8BujDu6K9RWBOvqkvfLU4i8BDz9a3BnJTQGAtp2DFZNvQUEhZe6Ak9dgSnoNXYL06h7_C_ekurtACs1jizVFDxl1DRRIJC7RCisW6dUs_LZqVUJrkSznLNuwFLU"/>
+</div>
+<!-- Mascot Peeking -->
+<div class="absolute bottom-0 right-0 p-4 transform translate-y-4">
+<span class="material-symbols-outlined text-headline-xl text-primary animate-bounce" data-icon="restaurant">restaurant</span>
+</div>
+</section>
+<!-- Product Details Section (Right) -->
+<section class="w-full md:w-1/2 p-margin-mobile md:p-margin-desktop flex flex-col justify-center bg-surface-container-lowest">
+<div class="max-w-xl mx-auto w-full">
+<span class="font-label-bold text-label-bold text-secondary uppercase tracking-[0.2em] mb-xs block neon-text-cyan">Menú • Para Compartir</span>
+<h1 class="font-headline-xl text-headline-xl text-primary uppercase mb-md neon-text-fuchsia italic">PICADAS</h1>
+<p class="font-body-lg text-body-lg mb-lg text-on-surface-variant leading-relaxed">
+                    El plato definitivo para parchar. Cargado con carne asada, chorizo picante, chicharrón crujiente, papa criolla y patacón. Hecho para los que no saben elegir solo una cosa. <span class="text-tertiary font-bold underline decoration-black underline-offset-4">Advertencia: Extremadamente adictivo.</span>
+</p>
+<!-- Pricing List -->
+<div class="space-y-sm mb-xl">
+<div onclick="toggleItemBtn(this)" class="flex flex-col group p-md border-2 border-black bg-surface hover:bg-secondary transition-all brutal-shadow cursor-pointer">
+    <div class="flex items-center justify-between">
+        <span class="font-label-bold text-headline-md uppercase group-hover:text-on-secondary">Picada Pequeña</span>
+        <span class="font-price-display text-price-display group-hover:text-on-secondary">$15.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Picada Pequeña', 15000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black uppercase">Agregar</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group p-md border-2 border-black bg-surface hover:bg-secondary transition-all brutal-shadow cursor-pointer">
+    <div class="flex items-center justify-between">
+        <span class="font-label-bold text-headline-md uppercase group-hover:text-on-secondary">Picada Personal</span>
+        <span class="font-price-display text-price-display group-hover:text-on-secondary">$17.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Picada Personal', 17000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black uppercase">Agregar</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group p-md border-2 border-black bg-surface hover:bg-secondary transition-all brutal-shadow cursor-pointer">
+    <div class="flex items-center justify-between">
+        <span class="font-label-bold text-headline-md uppercase group-hover:text-on-secondary">Picada Mediana</span>
+        <span class="font-price-display text-price-display group-hover:text-on-secondary">$25.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Picada Mediana', 25000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black uppercase">Agregar</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group p-md border-2 border-black bg-surface hover:bg-secondary transition-all brutal-shadow cursor-pointer">
+    <div class="flex items-center justify-between">
+        <span class="font-label-bold text-headline-md uppercase group-hover:text-on-secondary">Picada Grande</span>
+        <span class="font-price-display text-price-display group-hover:text-on-secondary">$30.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Picada Grande', 30000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black uppercase">Agregar</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group p-md border-2 border-black bg-surface hover:bg-secondary transition-all brutal-shadow cursor-pointer">
+    <div class="flex items-center justify-between">
+        <span class="font-label-bold text-headline-md uppercase group-hover:text-on-secondary">Picada Extra Grande</span>
+        <span class="font-price-display text-price-display group-hover:text-on-secondary">$40.000</span>
+    </div>
+    <button onclick="addToCart(event, 'Picada Extra Grande', 40000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black uppercase">Agregar</button>
+</div>
+</div>
+<!-- Add to Cart -->
+<div class="flex justify-center gap-sm">
+<span class="flex items-center gap-xs text-secondary font-label-bold"><span class="material-symbols-outlined" data-icon="local_fire_department">local_fire_department</span> PICANTE</span>
+<span class="flex items-center gap-xs text-tertiary font-label-bold"><span class="material-symbols-outlined" data-icon="groups">groups</span> PARA COMPARTIR</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Zigzag Divider -->
+<div class="zigzag-divider border-t-4 border-black"></div>
+<!-- Combined Section: Adicionales & Salchipapas -->
+<section class="bg-surface py-xl px-margin-mobile md:px-margin-desktop border-b-4 border-black">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl">
+<!-- Adicionales Column -->
+<div>
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase italic mb-lg">ADICIONALES</h3>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-md">
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="water_drop">water_drop</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary text-sm">QUESO MOZARELLA</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$5.000</p>
+<button onclick="addToCart(event, 'Add: Queso Mozarella', 5000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="nutrition">nutrition</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary text-sm">PAPAS FRANCESAS</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$6.000</p>
+<button onclick="addToCart(event, 'Add: Papas Francesas', 6000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="potted_plant">potted_plant</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary text-sm">MAÍZ</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$3.000</p>
+<button onclick="addToCart(event, 'Add: Maíz', 3000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="lunch_dining">lunch_dining</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary text-sm">JAMÓN</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$3.000</p>
+<button onclick="addToCart(event, 'Add: Jamón', 3000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="set_meal">set_meal</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary text-sm">CHORIZO</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$4.000</p>
+<button onclick="addToCart(event, 'Add: Chorizo', 4000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+</div>
+</div>
+<!-- Salchipapas Column -->
+<div>
+<h3 class="font-headline-md text-headline-md text-tertiary uppercase italic mb-lg">SALCHIPAPAS</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="restaurant">restaurant</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary">SALCHIPAPA PEQUEÑA</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$10.000</p>
+<button onclick="addToCart(event, 'Salchipapa Pequeña', 10000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+<div onclick="toggleItemBtn(this)" class="p-md bg-surface-container border-2 border-black brutal-shadow text-center flex flex-col items-center gap-xs hover:bg-secondary transition-all cursor-pointer group">
+<span class="material-symbols-outlined text-secondary text-headline-md group-hover:text-on-secondary" data-icon="restaurant">restaurant</span>
+<p class="font-label-bold uppercase group-hover:text-on-secondary">SALCHIPAPA GRANDE</p>
+<p class="font-price-display text-primary group-hover:text-on-secondary">$12.000</p>
+<button onclick="addToCart(event, 'Salchipapa Grande', 12000)" class="hidden mt-2 bg-primary text-on-primary text-[10px] font-bold py-1 px-2 border border-black uppercase">AGREGAR</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-md bg-surface-container-lowest border-t-4 border-black py-xl">
+<div class="flex flex-col items-center md:items-start">
+<a href="Inicio.html" class="font-headline-md text-headline-md text-primary font-black italic uppercase tracking-tighter">BURGER CRAZY</a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 BURGER CRAZY. UNAPOLOGETICALLY LOUD.</p>
+</div>
+<div class="flex gap-lg">
+<div class="flex flex-col gap-xs">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container-highest border-t-4 border-black shadow-[0px_-4px_0px_0px_rgba(0,0,0,1)] rounded-t-full">
+<div class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-[10px] uppercase">Inicio</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-full p-2 scale-110 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+<span class="font-label-bold text-[10px] uppercase">Menú</span>
+</div>
+<div onclick="toggleCartModal()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-label-bold text-[10px] uppercase">Carrito</span>
+</div>
+</nav>
+
+    <!-- Carrito Modal (Drawer) -->
+    <div id="cart-modal" class="fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCartModal()"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-surface border-l-4 border-black p-md flex flex-col shadow-[-8px_0px_0px_0px_rgba(0,0,0,1)]">
+            <div class="flex justify-between items-center mb-lg">
+                <h2 class="font-headline-md text-headline-md text-primary uppercase italic">Tu Pedido Loco</h2>
+                <button onclick="toggleCartModal()" class="material-symbols-outlined text-primary p-2">close</button>
+            </div>
+            <div id="cart-items" class="flex-grow overflow-y-auto space-y-md pr-xs custom-scrollbar"></div>
+            <div class="mt-lg pt-lg border-t-4 border-black">
+                <div class="flex justify-between items-center mb-md">
+                    <span class="font-headline-md text-headline-md uppercase text-secondary">Total:</span>
+                    <span id="cart-total" class="font-price-display text-price-display text-tertiary">$0</span>
+                </div>
+                <button onclick="sendOrderWhatsApp()" class="w-full bg-primary text-on-primary font-headline-md py-md border-4 border-black brutal-shadow uppercase italic">Enviar a WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body></html>

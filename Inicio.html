@@ -1,0 +1,284 @@
+<!DOCTYPE html><html class="dark" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Burguer Crazy - Stay Hungry, Stay Crazy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e5e2e3",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#303031",
+                    "primary-fixed-dim": "#ffb2be",
+                    "surface-container-lowest": "#0e0e0f",
+                    "on-primary-fixed": "#400014",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-surface": "#e5e2e3",
+                    "surface-variant": "#353436",
+                    "on-tertiary": "#3f2e00",
+                    "tertiary-container": "#b78a00",
+                    "on-secondary-container": "#004650",
+                    "surface-bright": "#39393a",
+                    "tertiary": "#fabd00",
+                    "secondary-container": "#00bcd4",
+                    "primary": "#ffb2be",
+                    "outline": "#ab888c",
+                    "on-tertiary-fixed": "#261a00",
+                    "surface": "#131314",
+                    "surface-dim": "#131314",
+                    "surface-container": "#1f1f20",
+                    "on-primary-container": "#5a0020",
+                    "inverse-surface": "#e5e2e3",
+                    "on-tertiary-container": "#372700",
+                    "secondary-fixed": "#a1efff",
+                    "surface-container-low": "#1b1b1c",
+                    "secondary": "#44d8f1",
+                    "on-primary": "#660025",
+                    "outline-variant": "#5b3f43",
+                    "surface-tint": "#ffb2be",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#bc004b",
+                    "primary-container": "#ff4e7c",
+                    "on-secondary-fixed": "#001f25",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#353436",
+                    "on-secondary-fixed-variant": "#004e59",
+                    "surface-container-high": "#2a2a2b",
+                    "on-surface-variant": "#e4bdc2",
+                    "background": "#131314",
+                    "tertiary-fixed-dim": "#fabd00",
+                    "primary-fixed": "#ffd9de",
+                    "on-primary-fixed-variant": "#900038",
+                    "on-secondary": "#00363e",
+                    "tertiary-fixed": "#ffdf9e",
+                    "secondary-fixed-dim": "#44d8f1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "lg": "48px",
+                    "gutter": "20px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "price-display": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-lg": ["Anybody"],
+                    "headline-md": ["Anybody"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-bold": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        
+        .brutal-shadow-hover:hover {
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+            transform: translate(4px, 4px);
+        }
+
+        .zigzag-divider {
+            height: 24px;
+            background-color: transparent;
+            background-image: linear-gradient(135deg, #000 25%, transparent 25%), 
+                              linear-gradient(225deg, #000 25%, transparent 25%);
+            background-position: 0 0, 0 0;
+            background-size: 24px 24px;
+            background-repeat: repeat-x;
+        }
+
+        .crazy-text-outline {
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 bg-surface dark:bg-surface border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="font-headline-md text-headline-md font-black text-primary dark:text-primary italic uppercase tracking-tighter">Burger Crazy
+        </div>
+<div class="hidden md:flex gap-md">
+<a class="font-headline-md text-headline-md font-bold text-primary underline decoration-4 underline-offset-8" href="#">Inicio</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Menu.html">Menú</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Contacto.html">Contacto</a>
+</div>
+<button onclick="window.location.href='Menu.html'" class="bg-primary-container text-on-primary-container px-md py-sm font-label-bold border-2 border-black brutal-shadow brutal-shadow-hover active:translate-y-1 transition-all uppercase">
+            ¡PIDE AHORA!
+        </button>
+</nav>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-primary-container pt-xl pb-lg border-b-4 border-black">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 32px 32px;"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col md:flex-row items-center gap-xl">
+<!-- Hero Content -->
+<div class="flex-1 text-center md:text-left">
+<div class="inline-block bg-tertiary text-on-tertiary font-label-bold px-sm py-xs border-2 border-black brutal-shadow mb-md rotate-[-2deg]">
+                    EL SABOR MÁS LOCO DE LA CIUDAD
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-on-primary-container mb-md uppercase tracking-tighter">
+                    SIGUE CON HAMBRE <br> <span class="text-white crazy-text-outline italic">¡SIGUE LOCO!</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-lg text-on-primary-container max-w-lg">
+                    No somos una hamburguesería común. Somos el caos delicioso que tus papilas estaban esperando. ¡Atrévete a probar la locura!
+                </p>
+<div class="flex flex-col sm:flex-row gap-md justify-center md:justify-start">
+<button onclick="window.location.href='Menu.html'" class="bg-secondary text-on-secondary px-lg py-md font-headline-md border-4 border-black brutal-shadow brutal-shadow-hover uppercase">
+                        VER EL MENÚ
+                    </button>
+<div class="flex flex-col justify-center">
+<span class="font-label-bold text-on-primary-container uppercase opacity-75">Domicilios directos:</span>
+<a class="font-headline-md text-headline-md text-white hover:text-tertiary transition-colors" href="tel:3014709186">
+                            301 4709186
+                        </a>
+</div>
+</div>
+</div>
+<!-- Hero Image / Logo Area -->
+<div class="flex-1 relative">
+<div class="relative w-full aspect-square max-w-[500px] border-4 border-black bg-surface rounded-full brutal-shadow overflow-hidden group">
+<img alt="Burguer Crazy Logo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfWZIAr1jJ4s9kBoL2zeOqPEVbIYihdZ78wZvqwaHEKyRXcYfDFIh2f_UxrNR9xQf4cdw8gngpuQO7oB6D2FEt8tjka_-j6dIUS6aqk_sfUF0v3WjicplKiHhHQ_Qgz-VgwkLELVqXk2hoi05qRusqkt4TxROJz64CPAXtoEkAfHi0NF8J3fBbjBJmokxpC6X8Pdj-DGFYetu9d0At78ZTQwq2tC6KbRU9Xf6m0lZMQ8trF0EeMX6fTIAPKbuwtsao46Z3GucMK1o">
+</div>
+<!-- Mascot Sticker -->
+<div class="absolute -bottom-8 -right-8 w-32 h-32 md:w-48 md:h-48 animate-bounce">
+<div class="bg-tertiary border-4 border-black rounded-full p-2 brutal-shadow flex items-center justify-center text-center rotate-[10deg]">
+<span class="font-headline-md text-headline-md text-black leading-tight">¡OFERTA<br>LOCA!</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Zigzag Divider -->
+<div class="zigzag-divider w-full"></div>
+<!-- Category Bento Grid -->
+<section class="py-xl px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="container mx-auto">
+<div class="mb-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-xs">Nuestras Categorías</h2>
+<div class="h-2 w-48 bg-secondary border-2 border-black inline-block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Burgers (Large) -->
+<a href="Menu-Hamburguesa.html" class="md:col-span-8 group relative overflow-hidden bg-primary border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<img alt="Hamburguesas Gourmet" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiTJxvyY52x9RWHV4k8lWbJ_mFrpFiqorn5OmqWCVYZTN5c4SIjYWehtdxEWFw4zpP9AXf13VbLNDqSM6Gsr9US9-77JbuqSIRsTXZ0Qi-42PUo9BNCGPAG1Nj3hDYBTz0HKczpt9iZM4-TNhcsmBr9Tl5RWj3z5cONzzvQubkpC22RdHfk9--6jqRc7Jz2KuWa_I5fZh9h9sztr41ei84ckVWVZVHPbjrLHylRSkPtLuIVn4ucG3K-6_UiqnB0oS3TSSYO8o5jqg">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md p-md">
+<div class="bg-tertiary text-black font-price-display text-price-display inline-block px-sm py-xs border-2 border-black mb-sm">DESDE $18.000</div>
+<h3 class="font-headline-lg text-headline-lg text-white uppercase">Hamburguesas</h3>
+<p class="text-white font-body-md max-w-md">Carne 100% Angus, pan artesanal y salsas secretas que te harán perder la cabeza.</p>
+</div>
+</a>
+<!-- Hot Dogs -->
+<a href="Menu_Perros.html" class="md:col-span-4 group relative overflow-hidden bg-secondary border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<img alt="Perros Calientes Gourmet" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjvUAVsjZ2XMTXr6aQmYWiIywPAD9Jvg3RUwk7fBFNW2L6ETLKv8Ld17aMCX1wFb7--CIjncAVulHmA6l9ZjaF5hP4ubqUnutTNqYcnVZUc3YoaRMn2P1Rm5kEb2k2jJTqJqxpskNXW1gl9UdochGXtUVaHjqzwQwB4jGcmyMy072tjVT0FytNA6PvNpmxCIVlxG1XTkURVuVHve3q-ZV6EQkXSB8dz4XHuJBFUEaPvSIL7DrgBrKAgp9mR0dZqn4_AF9j0BeSDs">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md p-md">
+<h3 class="font-headline-md text-headline-md text-white uppercase">Perros Calientes</h3>
+<p class="text-white font-body-md">Salchicha alemana y el toque "Crazy" en cada bocado.</p>
+</div>
+</a>
+<!-- Pizzas -->
+
+<!-- Picadas (Formerly Call to Action space in grid, repurposed for the requested category) -->
+<a href="Menu_Picadas.html" class="md:col-span-8 group relative overflow-hidden bg-surface-container border-4 border-black brutal-shadow brutal-shadow-hover h-[400px]">
+<img alt="Picadas Locas" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvl4jXbRXfVSECAABlZHJJyuARhkR1SfjhcVS5hAKAEPQztfjgrejNuLV_xg1akB9_vXu8YnSDuYX6psxB-V3hndhJYL7xaR_MAhTNBmtDyOcmJ1AES2yGXwoAQu3dlCEznCdWzntfDy8VUXtPO5OueRLEL7A09En2islLUXPoY-OkkHIp3u-96o7falhnDlJGVx60X_7VD59LKKSSzm8-IkowJQ1Mb4jVFKiQFGiNCQvwSM6xizAAw8so-M5nyUu-aoCLzNRYJb0">
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-md left-md p-md">
+<h3 class="font-headline-md text-headline-md text-white uppercase">Picadas</h3>
+<p class="text-white font-body-md">Para compartir la locura con todos tus amigos.</p>
+</div>
+</a>
+<div class="md:col-span-4 flex flex-col justify-center items-center text-center p-md bg-primary-container border-4 border-black brutal-shadow brutal-shadow-hover h-[400px] relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-8 h-8 bg-primary border-r-2 border-b-2 border-black"></div>
+    <div class="absolute bottom-0 right-0 w-8 h-8 bg-secondary border-l-2 border-t-2 border-black"></div>
+    <span class="material-symbols-outlined text-on-primary-container text-[64px] mb-sm" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+    <h3 class="font-headline-md text-headline-md text-on-primary-container uppercase mb-sm">¿Hambre de Locura?</h3>
+    <p class="text-on-primary-container font-body-md mb-md px-sm">Pide ahora y recibe tu pedido en tiempo record.</p>
+    <a class="bg-primary text-on-primary px-md py-sm font-label-bold border-2 border-black brutal-shadow brutal-shadow-hover flex items-center gap-xs" href="tel:3014709186">
+        <span class="material-symbols-outlined text-sm">call</span>
+        LLAMAR AHORA
+    </a>
+</div></div>
+<!-- CTA Section below grid -->
+
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container border-t-4 border-black mt-lg px-margin-mobile md:px-margin-desktop py-md w-full">
+<div class="flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-headline-md text-headline-md text-primary font-black italic uppercase tracking-tighter">
+                BURGER CRAZY
+            </div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-right">
+                © 2026 Burger Crazy. Sigue con Hambre, Sigue Loco
+            </div>
+</div>
+</footer>
+<!-- Floating Order Button (Mobile Only) -->
+<div class="md:hidden fixed bottom-margin-mobile right-margin-mobile z-50">
+<a class="w-16 h-16 bg-primary border-4 border-black rounded-full brutal-shadow flex items-center justify-center text-on-primary" href="Menu.html">
+<span class="material-symbols-outlined text-[32px]">shopping_cart</span>
+</a>
+</div>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.brutal-shadow-hover').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'translate(4px, 4px)';
+                button.style.boxShadow = '0px 0px 0px 0px rgba(0,0,0,1)';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+                button.style.boxShadow = '';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = '';
+                button.style.boxShadow = '';
+            });
+        });
+    </script>
+
+
+</body></html>

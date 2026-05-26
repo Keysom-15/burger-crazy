@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e5e2e3",
+                    "error": "#ffb4ab",
+                    "inverse-on-surface": "#303031",
+                    "primary-fixed-dim": "#ffb2be",
+                    "surface-container-lowest": "#0e0e0f",
+                    "on-primary-fixed": "#400014",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-surface": "#e5e2e3",
+                    "surface-variant": "#353436",
+                    "on-tertiary": "#3f2e00",
+                    "tertiary-container": "#b78a00",
+                    "on-secondary-container": "#004650",
+                    "surface-bright": "#39393a",
+                    "tertiary": "#fabd00",
+                    "secondary-container": "#00bcd4",
+                    "primary": "#ffb2be",
+                    "outline": "#ab888c",
+                    "on-tertiary-fixed": "#261a00",
+                    "surface": "#131314",
+                    "surface-dim": "#131314",
+                    "surface-container": "#1f1f20",
+                    "on-primary-container": "#5a0020",
+                    "inverse-surface": "#e5e2e3",
+                    "on-tertiary-container": "#372700",
+                    "secondary-fixed": "#a1efff",
+                    "surface-container-low": "#1b1b1c",
+                    "secondary": "#44d8f1",
+                    "on-primary": "#660025",
+                    "outline-variant": "#5b3f43",
+                    "surface-tint": "#ffb2be",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#bc004b",
+                    "primary-container": "#ff4e7c",
+                    "on-secondary-fixed": "#001f25",
+                    "error-container": "#93000a",
+                    "surface-container-highest": "#353436",
+                    "on-secondary-fixed-variant": "#004e59",
+                    "surface-container-high": "#2a2a2b",
+                    "on-surface-variant": "#e4bdc2",
+                    "background": "#131314",
+                    "tertiary-fixed-dim": "#fabd00",
+                    "primary-fixed": "#ffd9de",
+                    "on-primary-fixed-variant": "#900038",
+                    "on-secondary": "#00363e",
+                    "tertiary-fixed": "#ffdf9e",
+                    "secondary-fixed-dim": "#44d8f1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "lg": "48px",
+                    "gutter": "20px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "price-display": ["Anybody"],
+                    "headline-xl": ["Anybody"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-lg": ["Anybody"],
+                    "headline-md": ["Anybody"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "label-bold": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .zigzag-divider {
+            background-color: #131314;
+            background-image: linear-gradient(135deg, #000 25%, transparent 25%), linear-gradient(225deg, #000 25%, transparent 25%), linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(315deg, #000 25%, transparent 25%);
+            background-position: 10px 0, 10px 0, 0 0, 0 0;
+            background-size: 20px 20px;
+            background-repeat: repeat-x;
+            height: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full sticky top-0 z-50 bg-surface dark:bg-surface border-b-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div onclick="window.location.href='Inicio.html'" class="font-headline-md text-headline-md font-black text-primary dark:text-primary italic uppercase tracking-tighter cursor-pointer">
+            BURGER CRAZY
+        </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Inicio.html">Inicio</a>
+<a class="font-headline-md text-headline-md font-bold text-on-surface hover:text-primary transition-colors hover:skew-x-2 transition-transform" href="Menu.html">Menú</a>
+<a class="font-headline-md text-headline-md font-bold text-primary underline decoration-4 underline-offset-8" href="Contacto.html">Contacto</a>
+</div>
+<div class="flex items-center gap-md">
+<button onclick="toggleCartModal()" class="relative p-2 border-2 border-black bg-surface-container-highest brutal-shadow brutal-shadow-hover transition-all">
+    <span class="material-symbols-outlined text-primary">shopping_cart</span>
+    <span id="header-cart-count" class="absolute -top-2 -right-2 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
+</button>
+<button onclick="window.location.href='Menu.html'" class="bg-primary-container text-on-primary-container px-md py-sm border-2 border-black font-label-bold brutal-shadow brutal-shadow-hover active:translate-y-1 transition-all uppercase">
+            ¡PIDE AHORA!
+        </button>
+</div>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section with Mascot -->
+<section class="relative px-margin-desktop py-xl flex flex-col md:flex-row items-center gap-lg overflow-hidden">
+<div class="flex-1 z-10">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-md">
+                    ¿HAMBRE DE <br><span class="text-secondary italic">LOCURA?</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant mb-lg">
+                    Estamos listos para calmar ese rugido en tu estómago. Escríbenos, llámanos o simplemente grita "BURGUEEER" (esto último no garantiza respuesta, pero libera estrés).
+                </p>
+<div class="flex flex-wrap gap-md">
+<a class="flex items-center gap-sm bg-tertiary text-on-tertiary px-lg py-md border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="tel:3014709186">
+<span class="material-symbols-outlined text-[32px]">call</span>
+<span class="font-headline-md text-body-md font-bold uppercase">Llamar Ahora</span>
+</a>
+<a class="flex items-center gap-sm bg-secondary text-on-secondary-container px-lg py-md border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all" href="https://wa.me/3105153742">
+<span class="material-symbols-outlined text-[32px]">chat</span>
+<span class="font-headline-md text-body-md font-bold uppercase">WhatsApp</span>
+</a>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="w-full aspect-square bg-primary-container border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-3 overflow-hidden group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A messy, delicious gourmet burger with fries and potato wedges on a wooden board." src="https://lh3.googleusercontent.com/aida/ADBb0ui8EAjMks64D7vs0nQyk7lXHdeKJJ6fW0Xt8qx3lEH7MG7XtQnUJavH5fPOkPxodM_N1QVWiHdwXGztnwiyVekNEmyJ9FGr9qlp9pKo55ON2zEBve3REzVHmESbffRZICzAF3vj9-0nstN_9cnsRRkaPTnPjLWJ_fFe051V8ldQBah7Hbqn4m6OS817MlTPK-t3nwv3uMgzjgmU4VLIr8QNh-FiQ71_QwaqzD3XCP1Mb4LT1KCbYk_nxgFay6ZZKtUI6IgCmtQbXQ">
+</div>
+<!-- Mascot Sticker Element -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 bg-tertiary border-4 border-black rounded-full flex items-center justify-center rotate-12 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] z-20 hidden md:flex">
+<span class="material-symbols-outlined text-[80px]" style="font-variation-settings: &quot;FILL&quot; 1;">restaurant</span>
+</div>
+</div>
+</section>
+<!-- Zigzag Divider -->
+<div class="zigzag-divider my-lg"></div>
+<!-- Contact Form & Socials Bento Grid -->
+<section class="px-margin-desktop pb-xl grid grid-cols-1 md:grid-cols-12 gap-md">
+<!-- Contact Form Card -->
+<div class="md:col-span-8 bg-surface-container border-4 border-black p-lg shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-lg">CUÉNTANOS TU LOCURA</h2>
+<form onsubmit="sendContactWhatsApp(event)" class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-primary uppercase">Tu Nombre</label>
+<input id="contact-name" class="bg-surface-container-high border-2 border-black p-md focus:ring-0 focus:border-tertiary focus:bg-surface-bright outline-none transition-all font-body-md text-on-surface placeholder:text-outline-variant" placeholder="¿Cómo te llamamos?" type="text" required>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-primary uppercase">Correo Electrónico</label>
+<input id="contact-email" class="bg-surface-container-high border-2 border-black p-md focus:ring-0 focus:border-tertiary focus:bg-surface-bright outline-none transition-all font-body-md text-on-surface placeholder:text-outline-variant" placeholder="Para responderte..." type="email">
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-bold text-primary uppercase">Tu Mensaje</label>
+<textarea id="contact-message" class="bg-surface-container-high border-2 border-black p-md focus:ring-0 focus:border-tertiary focus:bg-surface-bright outline-none transition-all font-body-md text-on-surface placeholder:text-outline-variant" placeholder="¿Qué tienes en mente? (O qué hamburguesa quieres hoy)" rows="4" required></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-headline-md text-body-md font-black py-md border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all uppercase" type="submit">
+                        Enviar Mensaje Explosivo
+                    </button>
+</form>
+</div>
+<!-- Side Bento Column -->
+<div class="md:col-span-4 flex flex-col gap-md">
+<!-- Social Connect Card -->
+<div class="bg-secondary p-md border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex-1 flex flex-col justify-center items-center text-center">
+<h3 class="font-headline-md text-headline-md text-on-secondary mb-md italic">SÍGUENOS O MUERE DE HAMBRE</h3>
+<div class="flex gap-md">
+<a class="w-12 h-12 bg-on-secondary flex items-center justify-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:scale-110 active:translate-y-1 active:shadow-none transition-all" href="#">
+<span class="material-symbols-outlined text-secondary">share</span>
+</a>
+<a class="w-12 h-12 bg-on-secondary flex items-center justify-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:scale-110 active:translate-y-1 active:shadow-none transition-all" href="#">
+<span class="material-symbols-outlined text-secondary">thumb_up</span>
+</a>
+<a class="w-12 h-12 bg-on-secondary flex items-center justify-center border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:scale-110 active:translate-y-1 active:shadow-none transition-all" href="#">
+<span class="material-symbols-outlined text-secondary">camera</span>
+</a>
+</div>
+</div>
+<!-- Tarjeta de Ubicación con Mapa -->
+<div class="bg-surface-container-highest border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex flex-col overflow-hidden">
+    <div class="p-md flex items-start gap-md">
+        <span class="material-symbols-outlined text-tertiary text-[40px]" style="font-variation-settings: &quot;FILL&quot; 1;">location_on</span>
+        <div>
+            <h4 class="font-label-bold text-primary uppercase mb-xs">Visítanos</h4>
+            <p class="font-body-md text-on-surface">San José de los Campanos<br>Cartagena de Indias, Bolívar, Colombia</p>
+        </div>
+    </div>
+    <!-- Contenedor del Mapa -->
+    <div class="w-full h-48 border-t-4 border-black grayscale hover:grayscale-0 transition-all duration-500">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15694.675005886676!2d-75.47466185!3d10.368782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef6219929837a3b%3A0x6b8d960769b0777!2sSan%20Jos%C3%A9%20de%20los%20Campanos%2C%20Cartagena%20de%20Indias%2C%20Provincia%20de%20Cartagena%2C%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1715634567890!5m2!1ses!2sco" 
+            class="w-full h-full" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
+<!-- Hours Card -->
+<div class="bg-tertiary-container p-md border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-on-tertiary-container text-[40px]">schedule</span>
+<div>
+<h4 class="font-label-bold text-on-tertiary-container uppercase mb-xs">Horario de Locura</h4>
+                        <ul class="font-body-md text-on-tertiary-container space-y-1 text-[13px]">
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Lunes:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Martes:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Miércoles:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Jueves:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Viernes:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between border-b border-black/10 pb-0.5"><span>Sábado:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+                            <li class="flex justify-between"><span>Domingo:</span> <strong>6:00 PM - 12:30 PM</strong></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-md w-full bg-surface-container dark:bg-surface-container border-t-4 border-black mt-lg">
+<div class="font-headline-md text-headline-md text-primary mb-md md:mb-0 italic font-black uppercase tracking-tighter">
+            BURGER CRAZY
+        </div>
+<div class="flex flex-col items-center md:items-end gap-sm">
+<div class="flex flex-wrap justify-center gap-md mb-xs">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+<p class="text-tertiary font-body-md text-body-md">
+                © 2026 Burger Crazy. Sigue con Hambre, Sigue Loco
+            </p>
+</div>
+</footer>
+
+    <!-- Carrito Modal -->
+    <div id="cart-modal" class="fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCartModal()"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-surface border-l-4 border-black p-md flex flex-col shadow-[-8px_0px_0px_0px_rgba(0,0,0,1)]">
+            <div class="flex justify-between items-center mb-lg">
+                <h2 class="font-headline-md text-headline-md text-primary uppercase italic">Tu Pedido Loco</h2>
+                <button onclick="toggleCartModal()" class="material-symbols-outlined text-primary p-2">close</button>
+            </div>
+            <div id="cart-items" class="flex-grow overflow-y-auto space-y-md"></div>
+            <div class="mt-lg pt-lg border-t-4 border-black">
+                <div class="flex justify-between items-center mb-md">
+                    <span class="font-headline-md text-headline-md uppercase text-secondary">Total:</span>
+                    <span id="cart-total" class="font-price-display text-price-display text-tertiary">$0</span>
+                </div>
+                <button onclick="sendOrderWhatsApp()" class="w-full bg-primary text-on-primary font-headline-md py-md border-4 border-black brutal-shadow uppercase italic">Enviar a WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+<script src="cart.js"></script>
+<script>
+        // Simple interactive effect for mascot placeholder
+        const stickers = document.querySelectorAll('.rotate-12');
+        stickers.forEach(sticker => {
+            sticker.addEventListener('mouseover', () => {
+                sticker.style.transform = `rotate(${Math.random() * 20 - 10}deg) scale(1.1)`;
+            });
+            sticker.addEventListener('mouseout', () => {
+                sticker.style.transform = `rotate(12deg) scale(1)`;
+            });
+        });
+    </script>
+
+
+
+
+</body></html>

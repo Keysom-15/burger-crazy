@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PIZZAS - BURGER CRAZY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wght@700;800;900&amp;family=Be+Vietnam+Pro:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .serrated-edge {
+            clip-path: polygon(0% 0%, 5% 5%, 10% 0%, 15% 5%, 20% 0%, 25% 5%, 30% 0%, 35% 5%, 40% 0%, 45% 5%, 50% 0%, 55% 5%, 60% 0%, 65% 5%, 70% 0%, 75% 5%, 80% 0%, 85% 5%, 90% 0%, 95% 5%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        .brutalist-card-shadow {
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+        }
+        .neon-glow-fuchsia {
+            text-shadow: 0 0 10px rgba(255, 78, 124, 0.8);
+        }
+        .neon-glow-turquoise {
+            box-shadow: 0 0 15px rgba(68, 216, 241, 0.4);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffdf9e",
+                        "tertiary": "#fabd00",
+                        "on-surface-variant": "#e4bdc2",
+                        "on-secondary-fixed-variant": "#004e59",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#004650",
+                        "surface-bright": "#39393a",
+                        "background": "#131314",
+                        "surface-variant": "#353436",
+                        "primary-fixed-dim": "#ffb2be",
+                        "on-primary-fixed-variant": "#900038",
+                        "secondary": "#44d8f1",
+                        "surface-container-low": "#1b1b1c",
+                        "on-primary": "#660025",
+                        "on-tertiary-container": "#372700",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#5b3f43",
+                        "surface-container": "#1f1f20",
+                        "on-background": "#e5e2e3",
+                        "surface-tint": "#ffb2be",
+                        "surface-container-highest": "#353436",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface": "#131314",
+                        "outline": "#ab888c",
+                        "on-primary-container": "#5a0020",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-error": "#690005",
+                        "surface-dim": "#131314",
+                        "secondary-container": "#00bcd4",
+                        "inverse-on-surface": "#303031",
+                        "surface-container-high": "#2a2a2b",
+                        "secondary-fixed": "#a1efff",
+                        "primary-container": "#ff4e7c",
+                        "on-secondary": "#00363e",
+                        "on-primary-fixed": "#400014",
+                        "on-surface": "#e5e2e3",
+                        "on-secondary-fixed": "#001f25",
+                        "primary": "#ffb2be",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#3f2e00",
+                        "tertiary-fixed-dim": "#fabd00",
+                        "inverse-surface": "#e5e2e3",
+                        "secondary-fixed-dim": "#44d8f1",
+                        "primary-fixed": "#ffd9de",
+                        "inverse-primary": "#bc004b",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "tertiary-container": "#b78a00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "margin-mobile": "16px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin-desktop": "64px",
+                        "gutter": "20px",
+                        "lg": "48px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "price-display": ["Anybody"],
+                        "headline-xl": ["Anybody"],
+                        "label-bold": ["Space Grotesk"],
+                        "headline-lg": ["Anybody"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-md": ["Anybody"]
+                    },
+                    "fontSize": {
+                        "price-display": ["24px", {"lineHeight": "1.0", "fontWeight": "900"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "label-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface border-b-4 border-black shadow-[0px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex items-center gap-base">
+<a href="Inicio.html" class="font-headline-md text-headline-md font-black italic text-primary tracking-tighter uppercase">BURGER CRAZY</a>
+</div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Inicio.html">Inicio</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu-Hamburguesa.html">Hamburguesas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu_Perros.html">Perros</a>
+<a class="font-label-bold text-label-bold uppercase text-secondary underline decoration-4 underline-offset-8" href="Menu_Pizza.html">Pizzas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Menu_Picadas.html">Picadas</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface hover:text-secondary-fixed transition-colors" href="Contacto.html">Contacto</a>
+</nav>
+<div class="flex items-center gap-md">
+<button onclick="toggleCartModal()" class="relative material-symbols-outlined text-primary hover:bg-primary-container hover:text-on-primary-container p-2 rounded-full transition-all active:translate-y-1">
+    shopping_cart
+    <span id="header-cart-count" class="absolute -top-1 -right-1 bg-secondary text-on-secondary text-[10px] font-bold px-1.5 py-0.5 rounded-full border border-black hidden">0</span>
+</button>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 min-h-[90vh] items-stretch border-black">
+<!-- Image Side -->
+<div class="relative overflow-hidden bg-surface-container flex items-center justify-center p-md group">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="h-full w-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-secondary via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-2xl transform group-hover:scale-105 transition-transform duration-700">
+<img alt="Gourmet Pepperoni Pizza" class="w-full h-auto rounded-full border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] neon-glow-turquoise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg6Gx4gP8QE3zAlEV0vVo0amjNGmpJYkFJo-YSpY1pIZ8mcfUaO7LaZ_m_L1CWYcdTWN8R9D0740Ot4CwW1ESS9zYCRu9vH3gwVQISROp5CLjoGlnqpdEX0L3D70lQ-xlWdh8G5FHtiEx00GgA7Rsbkssk-4IxcyRfVhDYWfiqD8Ev5zlOmcmg6OzZajtW_5-v0VFNegtaFpDIfil9QMR4FI_xHxFwiojlCKSuFKrufJKLOSKHwuFzHQmMkx1IF7dYGbjBYvJjf1M"/>
+<!-- Floating Mascot Element (Conceptual) -->
+<div class="absolute -top-12 -right-12 bg-tertiary border-4 border-black p-4 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-12 animate-bounce">
+<span class="font-label-bold text-label-bold text-on-tertiary">¡LOCURA DE QUESO!</span>
+</div>
+</div>
+<!-- Neon Stripes from prompt inspiration -->
+<div class="absolute top-1/4 -left-20 w-80 h-4 bg-primary-container rotate-[35deg] blur-sm opacity-60"></div>
+<div class="absolute bottom-1/4 -right-20 w-80 h-4 bg-secondary rotate-[-35deg] blur-sm opacity-60"></div>
+</div>
+<!-- Price List Side -->
+<div class="bg-surface p-margin-mobile md:p-margin-desktop flex flex-col justify-center gap-lg border-l-4 border-black">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-primary-container italic uppercase mb-xs neon-glow-fuchsia">PIZZAS</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Nuestra masa es salvaje, nuestros ingredientes son ruidosos y el sabor es ATREVIDAMENTE AUDAZ. Elige tu veneno.</p>
+</div>
+<div class="w-full">
+<div class="grid grid-cols-4 gap-md pb-base border-b-4 border-black mb-md items-end">
+<span class="col-span-1 font-label-bold text-label-bold text-secondary uppercase">SABORES</span>
+<span class="text-center font-label-bold text-label-bold text-tertiary uppercase">Pizzetas</span>
+<span class="text-center font-label-bold text-label-bold text-tertiary uppercase">Mediana</span>
+<span class="text-center font-label-bold text-label-bold text-tertiary uppercase">Familiar</span>
+</div>
+<div class="space-y-sm">
+<!-- Menu Item -->
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer border-b border-black/10">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Jamón y Queso</span>
+<span class="text-center font-price-display text-price-display">$12.000</span>
+<span class="text-center font-price-display text-price-display">$18.000</span>
+<span class="text-center font-price-display text-price-display">$24.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Jamón y Queso (Pizzeta)', 12000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Jamón y Queso (Mediana)', 18000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Jamón y Queso (Familiar)', 24000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer border-b border-black/10">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Hawaiana</span>
+<span class="text-center font-price-display text-price-display">$14.000</span>
+<span class="text-center font-price-display text-price-display">$20.000</span>
+<span class="text-center font-price-display text-price-display">$26.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Hawaiana (Pizzeta)', 14000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Hawaiana (Mediana)', 20000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Hawaiana (Familiar)', 26000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer border-b border-black/10">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Primavera</span>
+<span class="text-center font-price-display text-price-display">$13.000</span>
+<span class="text-center font-price-display text-price-display">$19.000</span>
+<span class="text-center font-price-display text-price-display">$25.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Primavera (Pizzeta)', 13000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Primavera (Mediana)', 19000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Primavera (Familiar)', 25000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer border-b border-black/10">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Pollo y Veg</span>
+<span class="text-center font-price-display text-price-display">$15.000</span>
+<span class="text-center font-price-display text-price-display">$22.000</span>
+<span class="text-center font-price-display text-price-display">$28.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Pollo y Veg (Pizzeta)', 15000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Pollo y Veg (Mediana)', 22000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Pollo y Veg (Familiar)', 28000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer border-b border-black/10">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Vegetariana</span>
+<span class="text-center font-price-display text-price-display">$13.000</span>
+<span class="text-center font-price-display text-price-display">$19.000</span>
+<span class="text-center font-price-display text-price-display">$25.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Vegetariana (Pizzeta)', 13000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Vegetariana (Mediana)', 19000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Vegetariana (Familiar)', 25000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+<div onclick="toggleItemBtn(this)" class="flex flex-col group py-xs hover:bg-surface-container transition-colors rounded cursor-pointer">
+<div class="grid grid-cols-4 gap-md items-center w-full">
+<span class="col-span-1 font-headline-md text-[20px] uppercase group-hover:text-primary-container transition-colors">Pizzas con Todo</span>
+<span class="text-center font-price-display text-price-display">$17.000</span>
+<span class="text-center font-price-display text-price-display">$24.000</span>
+<span class="text-center font-price-display text-price-display">$32.000</span>
+</div>
+<div class="hidden action-container flex justify-end gap-2 mt-2">
+    <button onclick="addToCart(event, 'Pizzas con Todo (Pizzeta)', 17000)" class="bg-tertiary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Pizzeta</button>
+    <button onclick="addToCart(event, 'Pizzas con Todo (Mediana)', 24000)" class="bg-secondary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Mediana</button>
+    <button onclick="addToCart(event, 'Pizzas con Todo (Familiar)', 32000)" class="bg-primary text-black text-[10px] font-bold px-2 py-1 border border-black brutal-shadow uppercase">AGREGAR Familiar</button>
+</div>
+</div>
+</div><div class="mt-lg pt-lg border-t-4 border-black">
+<div onclick="toggleItemBtn(this)" class="flex flex-col gap-sm cursor-pointer group">
+<div class="flex justify-between items-baseline gap-md w-full">
+<h2 class="font-headline-md text-headline-md uppercase italic text-primary-container">Patacón Mixto</h2>
+<span class="font-price-display text-price-display text-secondary">$15.000</span>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+            Pollo, carne, chorizo, salsas, lechuga, cebolla, queso mozzarella, maíz, jamón.
+        </p>
+<button onclick="addToCart(event, 'Patacón Mixto', 15000)" class="hidden mt-2 bg-primary text-on-primary font-label-bold py-2 border-2 border-black brutal-shadow uppercase">Agregar al Carrito</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Asymmetric Bento Section for Promotions -->
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-md bg-surface-container-lowest border-t-4 border-black py-xl">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<a href="Inicio.html" class="font-headline-md text-headline-md text-primary font-black italic uppercase tracking-tighter">BURGER CRAZY</a>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 BURGER CRAZY. UNAPOLOGETICALLY LOUD.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-200" href="Terminos.html">Términos y Condiciones</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-all duration-200" href="Privacidad.html">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:underline transition-all duration-200" href="https://wa.me/3105153742">WhatsApp</a>
+</div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 pb-safe bg-surface-container-highest border-t-4 border-black shadow-[0px_-4px_0px_0px_rgba(0,0,0,1)] rounded-t-full">
+<button class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-[10px] uppercase mt-1">Inicio</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary text-on-secondary rounded-full p-3 scale-110 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:scale-95 transition-all">
+<span class="material-symbols-outlined">restaurant</span>
+<span class="font-label-bold text-[10px] uppercase mt-1">Menú</span>
+</button>
+<button onclick="toggleCartModal()" class="flex flex-col items-center justify-center text-on-surface-variant p-2 hover:text-primary transition-transform hover:scale-105 active:scale-95">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-label-bold text-[10px] uppercase mt-1">Carrito</span>
+</button>
+</nav>
+
+    <!-- Carrito Modal (Drawer) -->
+    <div id="cart-modal" class="fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="toggleCartModal()"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-surface border-l-4 border-black p-md flex flex-col shadow-[-8px_0px_0px_0px_rgba(0,0,0,1)]">
+            <div class="flex justify-between items-center mb-lg">
+                <h2 class="font-headline-md text-headline-md text-primary uppercase italic">Tu Pedido Loco</h2>
+                <button onclick="toggleCartModal()" class="material-symbols-outlined text-primary p-2">close</button>
+            </div>
+            <div id="cart-items" class="flex-grow overflow-y-auto space-y-md pr-xs custom-scrollbar"></div>
+            <div class="mt-lg pt-lg border-t-4 border-black">
+                <div class="flex justify-between items-center mb-md">
+                    <span class="font-headline-md text-headline-md uppercase text-secondary">Total:</span>
+                    <span id="cart-total" class="font-price-display text-price-display text-tertiary">$0</span>
+                </div>
+                <button onclick="sendOrderWhatsApp()" class="w-full bg-primary text-on-primary font-headline-md py-md border-4 border-black brutal-shadow uppercase italic">Enviar a WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body></html>

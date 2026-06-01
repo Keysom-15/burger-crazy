@@ -1,6 +1,6 @@
 let cart = JSON.parse(localStorage.getItem('crazy-cart')) || [];
 
-const WHATSAPP_PHONE = "3105153742"; // Cambia este número una sola vez aquí
+const WHATSAPP_PHONE = "3014709186"; // Cambia este número una sola vez aquí
 
 function toggleCartModal() {
     const modal = document.getElementById('cart-modal');
